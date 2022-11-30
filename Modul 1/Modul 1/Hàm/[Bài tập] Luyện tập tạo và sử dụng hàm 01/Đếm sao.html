@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let star1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+    let star2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa', 'Major', 'Leo']
+    let c = prompt(" Nhập chòm sao :")
+    checkstar(c)
+    function checkstar(star) {
+        let index = 0
+        if(star1.indexOf(star) >=0){
+            index = star1.indexOf(star)
+            alert(star + "Thuộc chòm " + star2[index])
+        }else{
+            alert('Không thuộc chòm ')
+        }
+    }
+</script>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div id="img"></div>
+<body>
+
+</body>
+</html>
+<script>
+  let url = prompt("image address: ");
+  for (let i = 1; i <= 20; i++){
+    document.getElementById('img').innerHTML += '<img width="250px" src="'+ url +'"> <br>'
+  }
+</script>

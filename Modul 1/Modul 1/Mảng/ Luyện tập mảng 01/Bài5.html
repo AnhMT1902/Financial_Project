@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function vowel_count(str1)
+    {
+        let a = 'aeiouAEIOU';
+        let b = 0;
+
+        for(let i = 0; i < str1.length ; i++)
+        {
+            if (a.indexOf(str1[i]) !== -1)
+            {
+                b += 1;
+            }
+
+        }
+        return b;
+    }
+    alert(vowel_count("The blue blue berry"));
+</script>
+</body>
+</html>

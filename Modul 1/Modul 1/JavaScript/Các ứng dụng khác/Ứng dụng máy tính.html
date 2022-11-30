@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <input type="number" id="dauvao1">
+      <input type="number" id="dauvao2">
+      <br>
+      <button onclick=" Cong()">Addition +</button>
+      <button onclick=" Tru()">Subtraction -</button>
+      <button onclick=" Nhan()">Multiplication *</button>
+      <button onclick=" Chia()">Divion /</button>
+      <br>
+      <div id="result">Result</div>
+</body>
+</html>
+<script>
+    function Cong() {
+        let a =+document.getElementById('dauvao1').value;
+        let b =+document.getElementById('dauvao2').value;
+        let result = a + b;
+        document.getElementById('result').innerHTML = result;
+    }
+    function Tru() {
+        let a =+document.getElementById('dauvao1').value;
+        let b =+document.getElementById('dauvao2').value;
+        let result = a - b;
+        document.getElementById('result').innerHTML = result;
+    }
+    function Nhan() {
+        let a =+document.getElementById('dauvao1').value;
+        let b =+document.getElementById('dauvao2').value;
+        let result = a * b;
+        document.getElementById('result').innerHTML = result;
+    }
+    function Chia() {
+        let a =+document.getElementById('dauvao1').value;
+        let b =+document.getElementById('dauvao2').value;
+        let result = a / b;
+        document.getElementById('result').innerHTML = result;
+    }
+
+
+</script>

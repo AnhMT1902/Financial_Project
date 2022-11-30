@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập từ : </label>
+<input type="text"  id="string1">
+<button onclick="transcript()"> Dịch</button>
+<p id = "result"></p>
+<script>
+    function transcript() {
+        let eng = ['apple', 'banana', 'pen', 'book'];
+        let vie = ['Táo', 'Chuối', 'Bút', 'Sách'];
+        let string2 = document.getElementById("string1").value;
+        for (let i = 0; i < eng.length; i++) {
+            if (string2 == eng[i]) {
+                document.getElementById("result").innerHTML = vie[i];
+            }
+
+        }
+
+    }
+</script>
+</body>
+</html>

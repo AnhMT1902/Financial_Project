@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+    let a = prompt("Nhập vào đây nhé : ")
+    checknum(a)
+    function checknum(x) {
+        for (let i = 0; i < number.length; i++) {
+            if (x >= '0' && x <= '9') {
+                alert("Đây là 1 số")
+                break;
+            } else {
+                alert("Đây không phải số")
+                break;
+            }
+        }
+    }
+</script>

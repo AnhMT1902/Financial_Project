@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" width="40px" style="text-align: center">
+    <tr>
+        <td colspan="4" height="40px">
+            <input type="text" id="C">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button name="number" onclick="nhap('1')">1</button>
+        </td>
+        <td>
+            <button name="number" onclick="nhap('2')">2</button>
+        </td>
+        <td>
+            <button name="number" onclick="nhap('3')">3</button>
+        </td>
+        <td>
+            <button name="number" onclick="nhap('+')">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button name="number" onclick="nhap('4')">4</button>
+        </td>
+        <td>
+            <button name="number" onclick="nhap('5')">5</button>
+        </td>
+        <td>
+            <button name="number" onclick="nhap('6')">6</button>
+        </td>
+        <td>
+            <button name="number" onclick="nhap('-')">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button name="number" onclick="nhap('7')">7</button>
+        </td>
+        <td>
+            <button name="number" onclick="nhap('8')">8</button>
+        </td>
+        <td>
+            <button name="number" onclick="nhap('9')">9</button>
+        </td>
+        <td>
+            <button name="number" onclick="nhap('x')">x</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button name="number" onclick="document.getElementById('C').value = ''">AC</button>
+        </td>
+        <td>
+            <button name="number" onclick="nhap('0')">0</button>
+        </td>
+        <td>
+            <button onclick="document.getElementById('C').value = eval(document.getElementById('C').value)">=</button>
+        </td>
+        <td>
+            <button name="number" onclick="nhap('/')">/</button>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
+<script>
+    function nhap(c) {
+        document.getElementById('C').value += c
+    }
+
+</script>

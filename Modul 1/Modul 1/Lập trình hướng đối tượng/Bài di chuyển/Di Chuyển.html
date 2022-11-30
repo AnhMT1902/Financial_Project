@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="_z-ed_-da.jpg" alt="" id="xe">
+<script>
+    class Xe {
+        x;
+        y;
+        w;
+        h;
+        speedX;
+        speedY;
+
+        constructor(x, y, w, h) {
+            this.x = x;
+            this.y = y;
+            this.w = w;
+            this.h = h;
+            this.speedX = 10;
+            this.speedY = 10;
+        }
+
+        move() {
+            this.x += this.speedX
+            this.y += this.speedy
+            this.display()
+        }
+
+        // moveToLeft() {
+        // //     this.x -= this.speedX
+        // //     this.display()
+        // // }
+        // //
+        // // moveToRight() {
+        // //     this.x += this.speedX
+        // //     this.display()
+        // // }
+        // //
+        // // moveToTop() {
+        // //     this.y -= this.speedY;
+        // //     this.display()
+        // // }
+        // //
+        // // moveToBot() {
+        // //     this.y += this.speedY;
+        // //     this.display()
+        // }
+
+        display() {
+            let xe = document.getElementById('xe');
+            xe.style.position = 'absolute';
+            xe.style.width = this.w + 'px';
+            xe.style.height = this.h + 'px';
+            xe.style.top = this.y + 'px';
+            xe.style.left = this.x + 'px';
+        }
+    }
+
+    let xe1 = new Xe(100, 100, 50, 50);
+    xe1.display()
+    window.addEventListener('keydown', (e) => {
+        if (e.keyCode === 40) {
+            // xe1.moveToBot();
+            xe1.speedX = 0;
+            xe1.speedy = 10;
+            xe1.move()
+        }
+        if (e.keyCode === 37) {
+            // xe1.moveToLeft()
+            xe1.speedX = -10;
+            xe1.speedy = 0;
+            xe1.move()
+        }
+        if (e.keyCode === 38) {
+            // xe1.moveToTop()
+            xe1.speedX = 0;
+            xe1.speedy = -10;
+            xe1.move()
+        }
+        if (e.keyCode === 39) {
+            // xe1.moveToRight()
+            xe1.speedX = 10;
+            xe1.speedy = 0;
+            xe1.move()
+        }
+    })
+
+    function diChuyen() {
+        xe1.move();
+        if(xe1.x == 1000){
+            xe1.speedX
+        }
+    }
+
+    setInterval(diChuyen, 100)
+</script>
+</body>
+</html>

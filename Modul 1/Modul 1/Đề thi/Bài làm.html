@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    <!--  Bài 1 -->
+    // let a = []
+    // for (let i = 0; i < 9; i++) {
+    //     a[i] = +prompt(' Nhập điểm thi vào:  ')
+    //     if (a[i] === '0') {
+    //         a.pop();
+    //         break;
+    //     }
+    // }
+    // let sum = 0;
+    // let avg = 0;
+    // for (let i = 0 ; i<a.length;i++){
+    //     sum = sum + a[i]
+    //     avg = sum/ a.length
+    //
+    // }
+    // alert("Điểm trung bình :" + avg);
+
+
+    //    Bài 3:
+    let a = +prompt("Nhập số a: ");
+    let arr = [];
+    for (let i = 0; i <= a; i++) {
+        arr.push(i)
+    }
+    function sNT(n) {
+        if (n < 2) return false;
+        if (n < 4) return true;
+        if (n >= 4) {
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) return false;
+            }
+            return true;
+        }
+    }
+    function sumOfListPrime() {
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (sNT(arr[i]))
+                sum += arr[i];
+        }
+        return sum;
+    }
+    alert("Tổng các số nguyên tố tới a là: " + sumOfListPrime())
+
+    //    Bài 2:
+    // function Arr(arr) {
+    //     for (let i = 0; i < arr.length; i++) {
+    //         alert(arr[i])
+    //     }
+    // }
+    // function insertNumberToArray(arr, x, index) {
+    //     if (index < 0 || index > arr.length) {
+    //         return arr;
+    //     } else {
+    //         arr[index] = x;
+    //         return arr;
+    //     }
+    // }
+    // let arr = [1, 2, 3, 4, 5];
+    // Arr(arr);
+    // document.write(insertNumberToArray(arr,7,5))
+
+</script>

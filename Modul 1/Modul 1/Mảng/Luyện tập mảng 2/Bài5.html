@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = [];
+    let count = 0;
+    let i = 0;
+    while(true){
+        a[i] = prompt('Nhập vào đây  :' + (i + 1));
+        if (a[i] === '.') {
+            a.pop()
+            break;
+        }
+        if (kt(a[i])) count++;
+        i++
+    }
+</script>

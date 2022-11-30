@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = []
+    for (let i = 0; i < 9; i++) {
+        a[i] = +prompt(' Nhập số vào:  ')
+        if (a[i] == '0') {
+            a.pop();
+            break;
+        }
+    }
+    let sum = 0;
+    let max = a[1]
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > max) {
+            max = a[i];
+            index = i;
+        }
+        sum = sum + a[i];
+    }
+    document.write('Số lớn nhất là : ' + max);
+    alert('Tổng là : ' + sum)
+</script>
+</body>
+</html>

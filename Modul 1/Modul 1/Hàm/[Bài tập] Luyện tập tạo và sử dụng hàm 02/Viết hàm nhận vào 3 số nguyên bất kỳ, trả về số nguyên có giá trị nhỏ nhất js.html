@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="newtext">
+<button onclick="Number()" type="button">Click here!</button>
+</body>
+</html>
+<script>
+  function Number(){
+    let number = document.getElementById('newtext').value;
+    if (isNaN(number)){
+        alert("Value not a number")
+    }else{
+      alert("Value is a number")
+    }
+  }
+</script>

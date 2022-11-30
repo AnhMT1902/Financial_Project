@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = [];
+    for (let i = 0; i < 10; i++) {
+        a[i] = prompt(' Nhập ký tự vào:  ' + (i + 1));
+    }
+    let b = 0
+    let c = a.length - 1;
+    while (b < c) {
+        let d = a[b];
+        a[b] = a[c];
+        a[c] = d;
+        b++;
+        c--;
+    }
+    console.log(a + '  ');
+</script>

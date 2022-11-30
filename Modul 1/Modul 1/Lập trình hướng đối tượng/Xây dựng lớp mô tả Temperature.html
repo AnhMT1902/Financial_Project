@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Temp {
+        C;
+
+        constructor(C) {
+            this.C = C;
+        }
+        F(){
+            return 9 / 5 * this.C + 32;
+        }
+        kevils(){
+            return this.C +273
+        }
+    }
+    let C = new Temp(25);
+    let my_F = C.F();
+    let my_kevils = C.kevils();
+
+    alert("Nhiệt độ K : " + my_kevils + "    " + "Nhiệt độ F :"+ my_F)
+
+
+</script>

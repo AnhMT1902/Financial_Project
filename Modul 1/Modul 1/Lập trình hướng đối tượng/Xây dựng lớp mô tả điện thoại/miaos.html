@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p align="center" id="p"></p>
+</body>
+</html>
+<script>
+  let Moblie = function (battery, name, phoneNumber) {
+    this.name = name;
+    this.phoneNumber = phoneNumber;
+    this.battery = battery;
+    this.status = false;
+    this.message = "";
+    this.inbox = [];
+    this.outbox = [];
+    //message
+    this.soanMess = function (string) {
+      if (this.statuschecker()) {
+        this.message = string;
+        this.batteryUse();
+      }
+    };
+    this.sendMess = function (name) {
+      if (this.statuschecker()) {
+        name.inbox.push(this.message);
+        this.outbox.push(this.message);
+        alert(this.name +" message send!");
+        name.alertMess();
+        this.batteryUse();
+      }
+    };
+    this.inboxMess = function () {
+      if (this.statuschecker()) {
+        let writter = "Inbox: <br>";
+        for (let i = 0; i < this.inbox.length; i++) {
+          writter = writter + (i+1)+") "+this.inbox[i]  +"."+"<br>" ;
+        }
+        this.batteryUse();
+        document.getElementById("p").innerHTML = writter;
+      }
+    };
+    this.outboxMess = function () {
+      let writter = "Inbox: <br>";
+      if (this.statuschecker()) {
+        for (let i = 0; i < this.outbox.length; i++) {
+          writter = writter + "<br>" + i + " " +this.outbox[i];
+        }
+        this.batteryUse();
+        document.getElementById("p").innerHTML = writter;
+      }
+    };
+
+    //battery
+    this.batteryUse = function () {
+      this.battery = this.battery - 1;
+      if (this.battery < 1) {
+        this.status = false;
+      }
+    };
+    this.charge = function (timeByMin) {
+      if (timeByMin === undefined) {
+        this.battery = 100
+      }
+      else {
+        this.battery = timeByMin / 2;
+      }
+    };
+    //status
+    this.statuschecker = function () {
+      if (this.status === false) {
+        alert("your phone is off, please turn on your phone to use this funtion");
+        return false;
+      }
+      return true;
+    };
+    this.checkStatus = function () {
+      (this.status) ? alert("Welcome") : alert("your phone is off");
+      this.batteryUse();
+    };
+    this.turnStatus = function () {
+      if (this.status) {
+        this.status = false;
+        alert("Your phone " + this.name + " is now off!");
+      } else {
+        this.status = true;
+        alert("Your phone " + this.name + " is now on!");
+      }
+    };
+    //alert
+    this.alertMess = function () {
+      alert(this.name + ": u have new message!")
+    };
+  };
+  let iphone = new Moblie(100,"iphone 6");
+  let nokia = new Moblie(100,"lumia g362");
+
+
+
+  nokia.turnStatus();
+  nokia.soanMess("yo iphone ^^");
+  nokia.sendMess(iphone);
+
+
+
+  iphone.turnStatus();
+  iphone.inboxMess();
+
+
+</script>

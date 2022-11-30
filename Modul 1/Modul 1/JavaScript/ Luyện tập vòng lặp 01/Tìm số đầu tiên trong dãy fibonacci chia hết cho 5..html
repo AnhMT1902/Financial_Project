@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let c = 0;
+    let Sum;
+    for (let i = 0; i < 20; i++) {
+        document.write(a + " ")
+        c = +a;
+        Sum = a + b;
+        a = b;
+        b = Sum;
+        if (Sum % 5 == 0) {
+            alert(Sum)
+            break;
+        }
+
+    }
+
+    document.write(c)
+</script>
+</body>
+</html>

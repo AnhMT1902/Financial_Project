@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let a = [];
+  let count = 0;
+  let i = 0;
+  while(true){
+    a[i] = prompt('Nhập vào đây  :' + (i + 1));
+    if (a[i] === '.') {
+      a.pop()
+      break;
+    }
+    if (kt(a[i])) count++;
+    i++
+  }
+  function kt(a) {
+    for (let i = 0; i < a.length; i++) {
+      if (a[i] >= '0' && a[i] <= '9') {
+        break;
+      }
+      else return true;
+    }
+    return false;
+  }
+
+  document.write('Mảng gồm:' +a +'<br>')
+  document.write('Số kí tự trong mảng : ' + count)
+</script>

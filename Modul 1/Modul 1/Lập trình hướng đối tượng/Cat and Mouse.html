@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class mouse {
+        name;
+        hp;
+        constructor(a, b) {
+            this.name = a;
+            this.hp = b;
+        }
+        isDied() {
+            if(this.hp < 0){
+                alert('Ngỏm rồi')
+            }
+        }
+        getInfo() {
+            alert('Thông tin chuột là : ' + this.name + "," + this.hp)
+        }
+    }
+    class Cat {
+        name;
+        weigth;
+        constructor(x, y) {
+            this.name = x;
+            this.weigth = y;
+        }
+        eat(mouse) {
+            this.weigth++;
+            mouse.hp--;
+            mouse.isDied();
+        }
+        getInfo() {
+            alert('Thông tin mèo là : ' + this.name + "," + this.weigth)
+        }
+    }
+    let m1 = new mouse('Jerry' , 3);
+    let c1 = new Cat('Tom' , 5)
+    c1.eat(m1);
+    c1.eat(m1);
+    c1.eat(m1);
+    c1.eat(m1);
+
+    //    Chuột :name,,getInfo(),isDied (hp<0)
+    //    Mèo: ,weigth,getInfo(),eat(mouse) (mouse.hp-1;cat.weigth++)
+
+</script>

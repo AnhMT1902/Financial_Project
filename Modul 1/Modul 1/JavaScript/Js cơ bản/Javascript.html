@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p> Select new Guadian</p>
+
+    <select id="Getit" onchange=" Welcome()">
+            <option value="Warlock">Warlock</option>
+            <option value="Titan">Titan</option>
+            <option value="Hunter">Hunter</option>
+    </select>
+
+    <script>
+            function Welcome() {
+                    var selectedValue = document.getElementById("Getit").value;
+                    alert(selectedValue)
+            }
+    </script>
+</body>
+</html>

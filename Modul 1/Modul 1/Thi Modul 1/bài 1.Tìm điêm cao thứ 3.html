@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function findMax(arr) {
+        let max
+        let temp
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    temp = arr[i]
+                    arr[i] = arr[j]
+                    arr[j] = temp
+                }
+            }
+        }
+        console.log(arr)
+        return max = arr[2]
+    }
+
+    let arr = [3, 5, 7, 2, 2, 3, 4]
+    let max
+    max = findMax(arr)
+    alert(max)
+</script>

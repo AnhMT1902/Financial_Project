@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="C" placeholder="nhap so a">
+<input type="number" id="D" placeholder="nhap so b">
+<input type="button" onclick="BinhPhuongA()">a^2</input>
+<input type="button" onclick="BinhPhuongAB()">a^b</input>
+</body>
+<script>
+    function BinhPhuongA(){
+        let C = document.getElementById('C').value
+        let F = (C*C);
+        document.write('BinhPhuongA: ' + F);
+    }
+    function BinhPhuongAB(){
+        let C = document.getElementById('C').value
+        let D = document.getElementById('D').value
+        let G = Math.pow(C,D);
+        document.write('BinhPhuongAB: ' + G);
+    }
+</script>
+</html>

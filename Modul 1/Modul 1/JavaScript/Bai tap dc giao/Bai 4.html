@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--B1-->
+<input type="number" id="a1" placeholder="nhap so a">
+<input type="button" onclick="Chuvi()">Chu vi</input>
+<input type="button" onclick="DienTich()">Dien tich</input>
+<script>
+    function Chuvi() {
+        let a1 = document.getElementById('a1').value
+        let Chuvi = (a1 * 4);
+        document.write('Chu Vi: ' + Chuvi);
+    }
+    function DienTich() {
+        let a1 = document.getElementById('a1').value
+        let Dientich = (a1 * a1);
+        document.write('Dientich' + Dientich);
+    }
+</script>
+</body>
+</html>

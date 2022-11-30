@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let str = 'c';
+    // let upper = 'The Lower god';
+    // let lower = 'The upper god';
+    // let result = [];
+    // for (let x = 0; x < str.length; x++) {
+    //     if (upper.indexOf(str[x]) !== -1) {
+    //         result.push(str[x].toLowerCase());
+    //     } else if (lower.indexOf(str[x]) !== -1) {
+    //         result.push(str[x].toUpperCase());
+    //     } else {
+    //         result.push(str[x]);
+    //     }
+    // }
+    // console.log(result.join(''))
+    let str =prompt('Nhap vao 1 chuoi :');
+    let arr =[];
+    for( let i=0; i< str.length;i++){
+        if (str[i] ==str[i].toUpperCase()){
+            arr.push(str[i].toLowerCase());
+        }else {
+            arr.push(str[1].toLowerCase())
+        }
+    }
+    alert(arr.join( ' '))
+</script>
+</body>
+</html>

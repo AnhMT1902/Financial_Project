@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // // 1,Sử dụng Hàm
+
+    // function Apple(type) {
+    //     this.type = type;
+    //     this.color = "red";
+    //     this.getInfo = getAppleInfo;
+    // }
+    // function getAppleInfo() {
+    //     return 'Màu ' + this.color +" Chưa chín nên là" + this.type + ' và nó là táo ';
+    // }
+    // let apple = new Apple(" Táo xanh");
+    // apple.color = "green";
+    // alert(apple.getInfo());
+
+
+    // 1.1 : Sử dụng hàm bên trong
+    function Apple(type){
+        this.type = type;
+        this.color = "Red";
+        this.getInfo = function (){
+            return this.color +"" + this.type + "Apple";
+        };
+    }
+
+
+    // 2.2 khai báo hàm bằng thuộc tính prototype
+
+</script>

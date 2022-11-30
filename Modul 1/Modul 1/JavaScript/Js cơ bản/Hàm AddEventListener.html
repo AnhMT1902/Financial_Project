@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <p> Select your Guadian</p>
+    <select id="Getit">
+      <option value="Warlock">Warlock</option>
+      <option value="Titan">Titan</option>
+      <option value="Hunter">Hunter</option>
+    </select>
+  <script>
+    var selectedElemment = document.getElementById("Getit");
+    selectedElemment.addEventListener("change",changeFuntion);
+    function changeFuntion() {
+      var selectValue = document.getElementById("Getit").value;
+      alert(selectValue);
+    }
+  </script>
+</body>
+</html>

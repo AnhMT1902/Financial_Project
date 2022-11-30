@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inp1" type="text">
+<input id="inp2" type="text">
+<input id="inp3" type="text">
+<button onclick="TG()" id="kt"> kiểm tra tam giác</button>
+<p id="out"></p>
+</body>
+</html>
+
+<script> function TG() {
+    let a1 = +document.getElementById('inp1').value;
+    let a2 = +document.getElementById('inp2').value;
+    let a3 = +document.getElementById('inp3').value;
+    console.log(a1, a2, a3)
+    if (a1 > 0 && a2 > 0 && a3 > 0 && a1 + a2 > a3 && a1 + a3 > a2 && a3 + a2 > a1) {
+        document.getElementById('out').innerHTML = 'a1 , a2, a3 là 3 cạnh của một tam giác';
+    }
+    if (a1 === a2 || a2 === a3 || a1 === a3) {
+        document.getElementById('out').innerHTML = 'a1 , a2, a3 là 3 cạnh của một tam giác cân';
+    }
+    if (a1 == a2 && a1 == a3) {
+        document.getElementById('out').innerHTML = 'a1 , a2, a3 là 3 cạnh của một tam giác đều';
+    }
+    if (a1 * a1 + a2 * a2 == a3 * a3 || a1 * a1 + a3 * a3 == a2 * a2 || a3 * a3 + a2 * a2 == a1 * a1) {
+        document.getElementById('out').innerHTML = 'a1 , a2, a3 là 3 cạnh của một tam giác vuông';
+    }
+}
+</script>

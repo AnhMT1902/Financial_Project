@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = +prompt('Nhập số vào đây :');
+    isPrime(a)
+
+    function isPrime(a) {
+        let count = 0
+        let isPrime = false;
+
+        if (a === 0) {
+            alert(a + 'Không là số nguyên tố ')
+        } else {
+            for (let i = 1; i <= a; i++) {
+                if (a % i === 0) {
+                    count += 1;
+                }
+            }
+            if (count === 2) {
+                isPrime = true;
+            }
+            if (isPrime) {
+                alert(a + '  Là số nguyên tố ')
+            } else {
+                alert(a + '  Không là số nguyên tố')
+            }
+        }
+    }
+
+</script>

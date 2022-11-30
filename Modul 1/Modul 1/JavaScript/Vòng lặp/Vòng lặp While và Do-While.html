@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // Cách 1:
+    // var count;
+    // for (count = 0; count < 100; count++)
+    // {
+    //     document.write("<hr width=" + count + "%>");
+    // }
+
+    // Cách 2:
+    // var count = 0;
+    // while (count < 100) {
+    //     document.write("<hr width=" + count + "%>");
+    //     count++;
+    // }
+    // Ví dụ Do-While:
+    var sum = 0;
+    var number;
+    do {
+        number = parseInt(prompt("Enter a Number"));
+        sum += number;
+    } while (number != 0);
+    document.write("The Sum is:" + sum);
+</script>

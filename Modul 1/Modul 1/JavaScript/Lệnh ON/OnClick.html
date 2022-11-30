@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p onclick="so_something()">Click me</p>
+<p id="Now">Click </p>
+</body>
+</html>
+<script>
+    function so_something() {
+        alert("Season of Hausted");
+    }
+    var demo = document.getElementById("Now");
+    demo.addEventListener("click",clickFunction);
+    function clickFunction(){
+        alert("xin chao");
+    }
+</script>

@@ -1,0 +1,1 @@
+{"version":3,"file":"spending.js","sourceRoot":"","sources":["../../../src/model/spending.ts"],"names":[],"mappings":";;;AAAA,uCAAuC;AAQvC,MAAM,cAAc,GAAG,IAAI,iBAAM,CAAY;IACzC,IAAI,EAAE,MAAM;IACZ,WAAW,EAAE,MAAM;IACnB,QAAQ,EAAE,OAAO;CACpB,CAAC,CAAC;AACH,MAAM,QAAQ,GAAG,IAAA,gBAAK,EAAY,UAAU,EAAE,cAAc,CAAC,CAAC;AACtD,4BAAQ"}
